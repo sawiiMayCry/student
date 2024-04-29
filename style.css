@@ -1,0 +1,221 @@
+:root {
+    --color-primary: #294B79;
+    --font-primary: 'Inter', sans-serif;
+    --bg-white: white;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 18px;
+    font-family: var(--font-primary);
+    color: #2b2b2b;
+
+}
+h2 {
+    font-size: 21px;
+}
+
+/* LOGIN */
+
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 600px;
+    height: 560px;
+    background-color: var(--bg-white);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px #0000001a;
+    border-radius: 20px;
+}
+
+.login-container h1 {
+    margin-top: 0;
+    font-size: 48px !important;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+input {
+    padding: 10px;
+    width: 350px;
+    border-radius: 5px;
+    border: var(--color-primary) solid 0.5px;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family: var(--font-primary);
+    cursor: pointer;
+}
+
+/* DASHBOARD */
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    padding: 10px;
+    height: 100%;
+    background-color: var(--color-primary);
+    top: 0;
+    left: 0;
+    position: fixed;
+    gap: 15px;
+}
+
+nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+nav a:hover {
+    background-color: rgba(34, 34, 34, 0.555);
+    border-radius: 10%;
+}
+
+.content {
+    margin-left: 150px;
+    margin-top: 50px;
+    max-width: 1500px;
+}
+
+.row {
+    display: flex;
+    gap: 110px;
+}
+
+.container-table {
+    width: 60%;
+}
+
+.title-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search input {
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: var(--color-primary) solid 0.5px;
+}
+
+table, .container-add form {
+    width: 100%;
+    background-color: var(--bg-white);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    padding: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td:last-child, th:last-child {
+    width: 100px;
+}
+
+.container-add {
+    width: auto;
+}
+
+.container-add form input {
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px;
+    border: var(--color-primary) solid 0.5px;
+}
+
+#inputForm button, #editModal button {
+    width: 150px !important;
+}
+
+button.actions {
+    background-color: transparent;
+    padding: 3px;
+}
+
+button.actions:hover {
+    background-color: rgba(0, 0, 0, 0.247);
+    border-radius: 10%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--bg-white);
+    margin: 20% auto;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 450px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

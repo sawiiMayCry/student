@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="login-container">
+    <img src="assets/FIDIT-logo.svg" width="100px">
+    <h1>Prijavite se</h1>
+    <form id="loginForm">
+      <label>Korisničko ime</label>
+      <input type="text" id="username" name="username"><br>
+      <label>Lozinka</label>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="button" onclick="validateLogin()">Prijavi se</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

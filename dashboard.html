@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  
+  <nav>
+        <a href="dashboard.html"><img src="assets/Home.svg" alt=""></a>
+
+        <a href="mailto:ines.mrzljak@uniri.hr"><img src="assets/User_fill.svg" alt=""></a>
+
+        <a href="https://www.inf.uniri.hr/"><img src="assets/globe.svg" alt=""></a>
+
+        <a href="index.html"><img src="assets/Sign_out_squre.svg" alt=""></a>
+  </nav>
+
+    <div class="content">
+      <h1>Dobrodošli na web aplikaciju!</h1>
+      <div class="row">
+        <div class="container-table">
+          <div class="title-search">
+            <h2>Popis studenata</h2>
+            <div class="search">
+              <p>Pretraži:<p>
+              <input type="text" id="searchInput" onkeyup="search()" placeholder="">
+            </div>
+          </div>
+              <table id="dataTable">
+                <thead>
+                  <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Akcije</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                    <!-- Ovdje će se dinamički generirati redovi tablice -->
+                  </tbody>
+              </table>
+        </div>
+        <div class="container-add">
+          <h2>Dodaj novog studenta</h2>
+            <form id="inputForm">
+              <label for="firstName">Ime:</label>
+              <input type="text" id="firstName" name="firstName"><br>
+              <label for="lastName">Prezime:</label>
+              <input type="text" id="lastName" name="lastName"><br>
+              <button type="button" onclick="addEntry()">Dodaj</button>
+            </form>
+        </div>
+      </div>
+
+
+      
+      <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h3>Uređivanje podataka</h3>
+          <form id="editForm">
+            <label for="editFirstName">Ime:</label>
+            <input type="text" id="editFirstName" name="editFirstName"><br>
+            <label for="editLastName">Prezime:</label>
+            <input type="text" id="editLastName" name="editLastName"><br>
+              <button type="button" onclick="saveChanges()">Spremi promjene</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
